@@ -2,11 +2,11 @@
 #include <input/processors.dtsi>
 
 #define DEF 0
-#define MOUSE 1
-#define SYM 2
-#define NUM 3
-#define FN 4
-#define GENSHIN 5 
+#define MOU 1
+#define LWR 2
+#define RSE 3
+#define ADJ 4
+#define SYM 5
 
 / {
   split_inputs {
@@ -35,8 +35,8 @@
     };
 
     move {
-      layers = <DEF MOUSE>;
-      input-processors = <&auto_mouse_layer MOUSE 5000>;
+      layers = <DEF MOU>;
+      input-processors = <&auto_mouse_layer MOU 5000>;
     };
   };
 
@@ -47,4 +47,3 @@
     excluded-positions = <30 31 32 16 17 18 10 11 12 13 22 23>;
   };
 };
-
