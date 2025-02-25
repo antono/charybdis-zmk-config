@@ -9,6 +9,7 @@
 #define ADJ 4
 #define SYM 5
 
+
 // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
 //    00     01     02     03    04      05        06     07     08     09     10     11
 // ├──────┼──────┼──────┼──────┼──────┼──────┤  ├──────┼──────┼──────┼──────┼──────┼──────┤
@@ -118,8 +119,8 @@
       bindings = <
         &trans      &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans
         &trans      &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans
-        &mkp MCLK   &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
-                        &mkp LCLK  &trans  &mkp RCLK      &trans    &trans
+        &mkp MCLK   &trans  &mo LWR    &mo RSE &trans     &trans    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
+                        &mkp LCLK  &mkp MCLK &mkp RCLK      &trans    &trans
       >;
     };
 
