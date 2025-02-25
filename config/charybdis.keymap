@@ -3,10 +3,10 @@
 #include <dt-bindings/zmk/pointing.h>
 
 #define DEF 0
-#define LWR 1
-#define RSE 2
-#define ADJ 3
-#define MOU 4
+#define MOU 1
+#define LWR 2
+#define RSE 3
+#define ADJ 4
 #define SYM 5
 
 // ╭──────┬──────┬──────┬──────┬──────┬──────╮  ╭──────┬──────┬──────┬──────┬──────┬──────╮
@@ -93,8 +93,8 @@
     compatible = "zmk,conditional-layers";
 
     tri-layer {
-      if-layers = <1 2>;
-      then-layer = <3>;
+      if-layers = <2 3>;
+      then-layer = <4>;
     };
   };
 
@@ -111,6 +111,15 @@
         &mt LCTRL GRAVE   &kp A   &kp S           &kp D         &kp F             &kp G         &kp H         &kp J            &kp K         &kp L     &kp SEMI   &mt RCTRL SQT
         &mt LALT MINUS    &kp Z   &mt LC(X) X     &mt LC(C) C   &mt LC(V) V       &kp B         &kp N         &kp M            &kp COMMA     &kp DOT   &kp FSLH   &mt RALT BSLH
                   &lt RSE TAB      &mt LSHFT SPACE   &lt LWR RET             &lt LWR ESC   &mt RSE BSPC
+      >;
+    };
+
+    mouse_layer {
+      bindings = <
+        &trans      &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans
+        &trans      &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans
+        &mkp MCLK   &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
+                        &mkp LCLK  &trans  &mkp RCLK      &trans    &trans
       >;
     };
 
@@ -138,15 +147,6 @@
         &none           &none   &none   &none          &none          &none          &none          &none          &none          &none          &none          &none
         &sys_reset      &none   &none   &none          &none          &none          &none          &none          &none          &none          &none          &sys_reset
                                         &trans         &trans         &trans         &trans         &trans
-      >;
-    };
-
-    mouse_layer {
-      bindings = <
-        &trans      &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans
-        &trans      &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans
-        &mkp MCLK   &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
-                        &mkp LCLK  &trans  &mkp RCLK      &trans    &trans
       >;
     };
 
