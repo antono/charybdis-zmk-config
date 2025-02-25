@@ -119,8 +119,8 @@
       bindings = <
         &trans      &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans
         &trans      &trans  &trans     &trans  &trans     &trans    &trans  &trans  &trans  &trans  &trans     &trans
-        &mkp MCLK   &trans  &mo LWR    &mo RSE &trans     &trans    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
-                        &mkp LCLK  &mkp MCLK &mkp RCLK      &trans    &trans
+        &mkp MCLK   &trans  &trans     &mo LWR &mo RSE    &trans    &trans  &trans  &trans  &trans  &trans  &mkp LCLK
+                        &mkp LCLK   &mkp RCLK  &mkp MCLK    &trans    &trans
       >;
     };
 
