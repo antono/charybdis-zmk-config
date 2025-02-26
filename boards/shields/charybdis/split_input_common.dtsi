@@ -44,6 +44,6 @@
     compatible = "zmk,input-processor-temp-layer";
     #input-processor-cells = <2>;
     require-prior-idle-ms = <500>;
-    excluded-positions = <00 12 24 11 23 35>;
+    excluded-positions = <36 37 38 00 12 24 11 23 35>;
   };
 };
