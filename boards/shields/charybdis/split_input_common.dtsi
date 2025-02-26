@@ -36,7 +36,7 @@
 
     move {
       layers = <DEF MOU>;
-      input-processors = <&auto_mouse_layer MOU 5000>;
+      input-processors = <&auto_mouse_layer MOU 3000>;
     };
   };
 
@@ -44,5 +44,6 @@
     compatible = "zmk,input-processor-temp-layer";
     #input-processor-cells = <2>;
     require-prior-idle-ms = <500>;
+    excluded-positions = <00 12 24 11 23 35>;
   };
 };
