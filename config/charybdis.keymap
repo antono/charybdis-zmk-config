@@ -71,6 +71,10 @@
       key-positions = <13 16>;
       bindings = <&to DEF>;
     };
+    combo_rshift {
+      key-positions = <39 40>;
+      bindings = <&kp RSHIFT>;
+    };
     combo_symbol_layer {
       key-positions = <31 34>;
       bindings = <&to SYM>;
